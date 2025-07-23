@@ -1,10 +1,90 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My GitHub Pages Site</title>
-  </head>
-  <body>
-    <h1>Hello, GitHub Pages!</h1>
-    <p>This is my homepage.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant Website</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero no-image">
+    <h1>Welcome to Delight Restaurant</h1>
+    <p>Experience the best dining in town</p>
+    <a href="#reservation" class="btn reserve-btn">Book a Table</a>
+  </header>
+
+  <main>
+    <section id="menu" class="menu-section">
+      <h2>Our Menu</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>Grilled Salmon</h3>
+          <p>Fresh Atlantic salmon grilled to perfection.</p>
+          <span class="price">₹450</span>
+        </div>
+        <div class="menu-item">
+          <h3>Paneer Tikka</h3>
+          <p>Chunks of marinated paneer grilled to perfection with flavorful spices.</p>
+          <span class="price">₹350</span>
+        </div>
+        <div class="menu-item">
+          <h3>Caesar Salad</h3>
+          <p>Crisp romaine lettuce with Caesar dressing and croutons.</p>
+          <span class="price">₹250</span>
+        </div>
+        <div class="menu-item">
+          <h3>Margherita Pizza</h3>
+          <p>Classic pizza with fresh basil, tomatoes, and mozzarella.</p>
+          <span class="price">₹350</span>
+        </div>
+        <div class="menu-item">
+          <h3>Chocolate Lava Cake</h3>
+          <p>Warm chocolate cake with molten chocolate center.</p>
+          <span class="price">₹180</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservation" class="reservation-section">
+      <h2>Reserve Your Table</h2>
+      <form id="reservationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" required />
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" required />
+
+        <label for="people">Number of People:</label>
+        <input type="number" id="people" min="1" max="20" required />
+
+        <button type="submit" class="btn reserve-btn">Book Now</button>
+      </form>
+      <p id="confirmation" class="confirmation-message"></p>
+    </section>
+
+    <section id="gallery" class="photo-gallery">
+  <h2>Our Dishes</h2>
+  <div class="photo-grid">
+    <img src="images/dish1.jpg" alt="Dish 1" loading="lazy" />
+    <img src="images/dish2.jpg" alt="Dish 2" loading="lazy" />
+    <img src="images/dish3.jpg" alt="Dish 3" loading="lazy" />
+    <img src="images/dish4.jpg" alt="Dish 4" loading="lazy" />
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Delight Restaurant. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
