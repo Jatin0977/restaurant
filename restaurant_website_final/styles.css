@@ -1,0 +1,242 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fffefb;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #ffffff;
+}
+h3{
+  color: #000000;
+}
+h2{
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  background-color: #ef5350;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+
+.hero {
+  background: url('images/tasty-pizza.avif') center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-color: #ef5350;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Main Sections */
+
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Menu Section */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+
+.menu-item {
+  background-color: #f53f3f;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0);
+  transform: scale(1.05);
+}
+
+.menu-item h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.price {
+  font-weight: 700;
+  color: #000000;
+  font-size: 1.1rem;
+}
+
+/* Reservation Section */
+
+.reservation-section form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #f55151;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-section label {
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+.reservation-section input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.reservation-section input:focus {
+  border-color: #ef5350;
+  outline: none;
+}
+
+.confirmation-message {
+  margin-top: 15px;
+  color: green;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Events Section */
+
+.events-section ul {
+  color : #000000;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+  list-style-type: none;
+}
+
+.events-section li {
+  background-color: #5ff032;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.09);
+  font-weight: 600;
+}
+
+/* Gallery */
+
+.photo-gallery {
+  padding: 40px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+.photo-grid {
+  display: flex;
+  flex-direction: row;   /* default, can also omit */
+  flex-wrap: wrap;       /* wrap to next row if too many images */
+  gap: 20px;             /* space between images */
+  justify-content: center; /* center images horizontally */
+  max-width: 1000px;     /* max width of gallery area */
+  margin: 0 auto;        /* center the whole container */
+}
+
+
+
+.photo-gallery h2 {
+  margin-bottom: 20px;
+}
+
+.photo-grid img {
+  width: 200px;          /* fixed width */
+  height: 150px;         /* fixed height */
+  object-fit: cover;     /* cover frame without distortion */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+
+/* Footer */
+
+.footer {
+  background-color: #ef5350;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  @media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* or 3, or 2 as needed for tablet size */
+  }
+}
+
+@media (max-width: 300px) {
+  .menu-grid {
+    grid-template-columns: 1fr; /* single column for small devices */
+  }
+}
+
+}
